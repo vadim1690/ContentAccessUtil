@@ -80,21 +80,25 @@ To use ContentAccessUtil, you need to have the following:
 
 ## Methods
 
-    `takePicturePreview(TakePicturePreviewCallback callback)`
+## `takePicturePreview(TakePicturePreviewCallback callback)`
     Takes a picture preview and returns the `Bitmap` to the `callback` function.
 
    * Parameters
+    
      `callback` - the callback function that takes the `Bitmap` of the picture preview.
      
    * Example
-        mContentAccessLifeCycleObserver.takePicturePreview(bitmap -> {
-              // Do something with the bitmap
-          });
+   
+
+			mContentAccessLifeCycleObserver.takePicturePreview(bitmap -> {
+			      // Do something with the bitmap
+			  });
           
 ## `selectFile(String mimeType, SelectFileCallback callback)`
     Launches an intent to allow the user to select a file of a specific MIME type.
     
   * Parameters
+   
     	  `mimeType` - the desired MIME type of the file to be selected.
      	 `callback` - the callback to be invoked after the user has selected a file.
       
