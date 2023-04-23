@@ -94,15 +94,15 @@ To use ContentAccessUtil, you need to have the following:
 ## `selectFile(String mimeType, SelectFileCallback callback)`
     Launches an intent to allow the user to select a file of a specific MIME type.
     
-    * Parameters
-      `mimeType` - the desired MIME type of the file to be selected.
-      `callback` - the callback to be invoked after the user has selected a file.
+  * Parameters
+    	  `mimeType` - the desired MIME type of the file to be selected.
+     	 `callback` - the callback to be invoked after the user has selected a file.
       
-    * Example
+  * Example
     
-          mContentAccessLifeCycleObserver.selectFile(ContentAccessLifeCycleObserver.ALL_FILES, uri -> {
-                // Do something with the uri
-            });
+		  mContentAccessLifeCycleObserver.selectFile(ContentAccessLifeCycleObserver.ALL_FILES, uri -> {
+			// Do something with the uri
+		    });
 
     
 
