@@ -31,21 +31,9 @@ This is a simple permission library for Android that allows you to easily reques
 ## Prerequisites
 
 To use ContentAccessUtil, you need to have the following:
-0
-    * Android Studio installed
-    * A minimum of Android API 21
 
-------------------------------------------------------------------------------------------------------------
-
-## Installation
-
-1) Clone or download the `ContentAccessUtil` repository.
-2) In Android Studio, select `File > New > Import Module`... and select the `ContentAccessUtil` directory.
-3) Add the following dependency to your app module's `build.gradle` file:
-
-        dependencies {
-           implementation project(':contentaccessutil')
-         }
+   * Android Studio installed
+   * A minimum of Android API 21
 
 ------------------------------------------------------------------------------------------------------------
 
@@ -77,11 +65,35 @@ To use ContentAccessUtil, you need to have the following:
         mContentAccessLifeCycleObserver.selectFile(ContentAccessLifeCycleObserver.ALL_FILES, uri -> {
               // Do something with the uri
           });
+	  
+	  
+	  
 
-## Methods
+## File selection
+	
+   Pass this paramerts in the select file function to determine which mime type to select.
+   
+* ALL_FILES - All files
+* AUDIO_AAC - AAC files
+* AUDIO_WAV - WAV files
+* IMAGE_JPEG - JPEG files
+* IMAGE_PNG - PNG files
+* AUDIO_MP3 - MP3 files
+* VIDEO_MP4 - MP4 files
+* FILE_CSV - CSV files
+* FILE_WORD - Word files
+* FILE_HTML - HTML files
+* FILE_JSON - JSON files
+* FILE_PDF - PDF files
+* FILE_PPT - PPT files
+* FILE_XLS - XLS files
+
+
+## Main Methods
 
 ## `takePicturePreview(TakePicturePreviewCallback callback)`
-    Takes a picture preview and returns the `Bitmap` to the `callback` function.
+    
+   Takes a picture preview and returns the `Bitmap` to the `callback` function.
 
    * Parameters
     
@@ -95,12 +107,13 @@ To use ContentAccessUtil, you need to have the following:
 			  });
           
 ## `selectFile(String mimeType, SelectFileCallback callback)`
-    Launches an intent to allow the user to select a file of a specific MIME type.
+   
+   Launches an intent to allow the user to select a file of a specific MIME type.
     
   * Parameters
    
-    	  `mimeType` - the desired MIME type of the file to be selected.
-     	 `callback` - the callback to be invoked after the user has selected a file.
+    `mimeType` - the desired MIME type of the file to be selected.
+    `callback` - the callback to be invoked after the user has selected a file.
       
   * Example
     
