@@ -3,7 +3,7 @@
 # ContentAccessUtil [![](https://jitpack.io/v/vadim1690/ContentAccessUtil.svg)](https://jitpack.io/#vadim1690/ContentAccessUtil)
 
 
-This is a simple permission library for Android that allows you to easily request runtime permissions.
+This is a simple library for Android that allows you to access the phone content.
 
 # Getting Started
 
